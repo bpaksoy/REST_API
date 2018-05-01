@@ -28,8 +28,6 @@ class User extends Component{
 
   handleSubmit(event){
     event.preventDefault();
-    const target = event.target;
-    const name = this.refs.name.value;
     const password = this.refs.password.value;
     const user = {};
     const value = this.state.active
@@ -37,7 +35,7 @@ class User extends Component{
     user.name = name;
     user.password = password;
     user.active =  value;
-    
+
     this.state.active = !this.state.active;
     this.refs.name.value = "";
     this.refs.password.value = "";
